@@ -1,3 +1,4 @@
 .idea
 .market_api
-./Exports/
+.env
+Exports/
