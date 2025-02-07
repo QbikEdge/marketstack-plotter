@@ -1,4 +1,4 @@
-# Modern Data Plotter
+# Marketstack Plotter
 
 Ein erweitertes Plotter-Programm mit Icons, das Finanzdaten entweder über die Marketstack-API oder aus einer lokalen
 JSON-/CSV-Datei lädt und diese in zwei verschiedenen Plot-Bereichen visualisiert.
