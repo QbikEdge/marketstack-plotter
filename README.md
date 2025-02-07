@@ -3,7 +3,6 @@
 Ein erweitertes Plotter-Programm mit Icons, das Finanzdaten entweder über die Marketstack-API oder aus einer lokalen
 JSON-/CSV-Datei lädt und diese in zwei verschiedenen Plot-Bereichen visualisiert.
 
----
 
 ## Inhaltsverzeichnis
 
@@ -13,7 +12,6 @@ JSON-/CSV-Datei lädt und diese in zwei verschiedenen Plot-Bereichen visualisier
 - [Benutzung](#benutzung)
 - [Screenshots](#screenshots)
 
----
 
 ## Über die App
 
@@ -26,7 +24,6 @@ Der **Modern Data Plotter** bietet zwei verschiedene Plotbereiche:
 Zudem können die geladenen Daten als JSON oder CSV gespeichert werden. Über die benutzerfreundliche Oberfläche lassen
 sich zudem Daten über die Marketstack-API abrufen oder lokal aus Dateien laden.
 
----
 
 ## Features
 
@@ -48,7 +45,6 @@ sich zudem Daten über die Marketstack-API abrufen oder lokal aus Dateien laden.
 - **🌙 Modernes Design:**
     - Verwendung des `qdarkstyle`-Themes für ein modernes, dunkles Interface.
 
----
 
 ## Installation
 
@@ -119,7 +115,6 @@ deactivate
 </details>
 </details>
 
----
 
 Stelle sicher, dass Python 3 installiert ist. Anschließend können die benötigten Pakete via `pip` installiert werden:
 
@@ -148,7 +143,6 @@ pyinstaller --onefile --windowed --icon=icon.ico MarketDataAPIv3.py
 
 </details>
 
----
 
 ## Benutzung
 
@@ -167,7 +161,6 @@ Custom-Plot-Optionen können über die GUI eingestellt werden. Der Plot kann als
 exportiert
 werden.
 
----
 
 ## Screenshots
 
@@ -177,7 +170,6 @@ werden.
 ![img_1.png](docs/screenshots/img_1.png)
 </details>
 
----
 
 ## Quellen
 
