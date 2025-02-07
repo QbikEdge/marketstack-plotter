@@ -52,6 +52,75 @@ sich zudem Daten über die Marketstack-API abrufen oder lokal aus Dateien laden.
 
 ## Installation
 
+<details><summary>Empfolen ist eine venv (virtual environment) zu erstellen. Klicke hier um mehr zu erfahren:</summary>
+
+```bash
+python -m venv market-plotter
+```
+
+### venv aktivieren:
+
+#### Windows:
+
+```
+.market-plotter\Scripts\activate
+```
+
+#### Linux/macOS:
+
+```bash
+source market-plotter/bin/activate
+```
+
+<details><summary>deaktivieren von virtual environment</summary>
+```bash
+deactivate
+```
+</details>
+
+<details><summary>entfernen der virtual environment:</summary>
+
+##### Windows:
+
+```bash
+rmdir /S /Q market-plotter
+```
+
+#### Linux/macOS:
+
+```bash
+rm -rf market-plotter
+```
+
+</details>
+
+<details><summary>virtual environment umbenennen:</summary>
+
+#### First, deactivate if active
+
+```bash
+deactivate
+```
+
+#### Windows (CMD):
+
+```bash
+ ren market-plotter new_name
+```
+
+#### Linux/macOS:
+
+```bash
+  mv market-plotter new_name
+```
+
+#### Nach dem Umbenennen, überprüfe und aktualisiere absolute Pfade in den Aktivierungsskripten, falls notwendig.
+
+</details>
+</details>
+
+---
+
 Stelle sicher, dass Python 3 installiert ist. Anschließend können die benötigten Pakete via `pip` installiert werden:
 
 ```bash
@@ -64,8 +133,8 @@ Alternativ kann auch das `requirements.txt`-File genutzt werden:
 pip install -r requirements.txt
 ```
 
-Falls gewünscht, kann das Programm auch als ausführbare Datei `exe` für Windows-Systeme erstellt werden. Hierfür wird
-das Paket `pyinstaller` benötigt:
+<details><summary>Falls gewünscht, kann das Programm auch als ausführbare Datei <code>exe</code> für Windows-Systeme erstellt werden. Hierfür wird
+das Paket <code>pyinstaller</code> benötigt:</summary>
 
 ```bash
 pip install pyinstaller
@@ -77,9 +146,13 @@ Anschließend kann das Programm mit folgendem Befehl kompiliert werden:
 pyinstaller --onefile --windowed --icon=icon.ico MarketDataAPIv3.py
 ```
 
+</details>
+
 ---
 
 ## Benutzung
+
+❗ Vor der Programmstart sollte ein [marketstack.com](https://marketstack.com) Key in den `.env` hinzugefügt werden.
 
 Das Programm kann über die Kommandozeile gestartet werden:
 
@@ -90,7 +163,8 @@ python MarketDataAPIv3.py
 Nach dem Start des Programms kann entweder ein Aktien-Symbol aus dem Dropdown-Menü ausgewählt oder ein eigenes Symbol
 eingegeben werden. Anschließend kann entweder über die API oder über eine lokale Datei die Daten geladen werden.
 
-Custom-Plot-Optionen können über die GUI eingestellt werden. Der Plot kann als Bild gespeichert oder die Daten exportiert
+Custom-Plot-Optionen können über die GUI eingestellt werden. Der Plot kann als Bild gespeichert oder die Daten
+exportiert
 werden.
 
 ---
@@ -102,6 +176,8 @@ werden.
 ![img.png](docs/screenshots/img.png)
 ![img_1.png](docs/screenshots/img_1.png)
 </details>
+
+---
 
 ## Quellen
 
