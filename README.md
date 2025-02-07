@@ -1,60 +1,53 @@
 # Marketstack Plotter
 
-Ein erweitertes Plotter-Programm mit Icons, das Finanzdaten entweder über die Marketstack-API oder aus einer lokalen
-JSON-/CSV-Datei lädt und diese in zwei verschiedenen Plot-Bereichen visualisiert.
+An advanced plotter program that loads financial data either via the Marketstack API or from a local JSON/CSV file and visualizes them in two different plot areas.
 
+## Table of Contents
 
-## Inhaltsverzeichnis
-
-- [Über die App](#über-die-app)
+- [About the App](#about-the-app)
 - [Features](#features)
 - [Installation](#installation)
-- [Benutzung](#benutzung)
+- [Usage](#usage)
 - [Screenshots](#screenshots)
 
+## About the App
 
-## Über die App
+The **Modern Data Plotter** offers two different plot areas:
 
-Der **Modern Data Plotter** bietet zwei verschiedene Plotbereiche:
+- **Standard Plot:** Visualizes the default progression of `date` against `close`.
+- **Custom Plot:** Users can individually select the x- and y-axis from the loaded data and set additional plot settings such as title, axis labels, chart type, color, legend, and color bar.
 
-- **Standard-Plot:** Visualisiert den Standardverlauf von `date` gegen `close`.
-- **Benutzerdefinierter Plot:** Hier können Benutzer individuell aus den geladenen Daten die x- und y-Achse wählen sowie
-  weitere Plot-Einstellungen wie Titel, Achsenbeschriftungen, Diagrammtyp, Farbe, Legende und Colorbar festlegen.
-
-Zudem können die geladenen Daten als JSON oder CSV gespeichert werden. Über die benutzerfreundliche Oberfläche lassen
-sich zudem Daten über die Marketstack-API abrufen oder lokal aus Dateien laden.
-
+Additionally, the loaded data can be saved as JSON or CSV. The user-friendly interface also allows fetching data via the Marketstack API or loading from local files.
 
 ## Features
 
-- **📃 Datenquelle:**
-    - Laden von Finanzdaten über die Marketstack-API.
-    - Laden von lokalen JSON- oder CSV-Dateien.
-- **📈 Ploting📊:**
-    - Standardplot: `date` vs. `close`.
-    - Benutzerdefinierter Plot mit frei wählbaren Achsen.
-    - Unterstützung von Liniendiagrammen, Scatter-Plots und Balkendiagrammen.
-- **⌨ UI-Elemente:**
-    - Dropdown-Menü für die 30 gängigsten Aktien-Symbole.
-    - Textfeld zur Eingabe eigener Aktien-Symbole.
-    - Farbauswahl, Legenden- und Colorbar-Option.
-    - Menü- und Toolbar-Elemente mit Icons.
-- **🖨 Datenexport:**
-    - Speichern des Plots als Bild (PNG/JPEG).
-    - Export der Daten als JSON oder CSV.
-- **🌙 Modernes Design:**
-    - Verwendung des `qdarkstyle`-Themes für ein modernes, dunkles Interface.
-
+- **📃 Data Source:**
+    - Load financial data via the Marketstack API.
+    - Load local JSON or CSV files.
+- **📈 Plotting 📊:**
+    - Standard plot: `date` vs. `close`.
+    - Custom plot with freely selectable axes.
+    - Support for line charts, scatter plots, and bar charts.
+- **⌨ UI Elements:**
+    - Dropdown menu for the 30 most common stock symbols.
+    - Text field for entering custom stock symbols.
+    - Color selection, legend, and color bar options.
+    - Menu and toolbar elements with icons.
+- **🖨 Data Export:**
+    - Save the plot as an image (PNG/JPEG).
+    - Export data as JSON or CSV.
+- **🌙 Modern Design:**
+    - Uses the `qdarkstyle` theme for a modern, dark interface.
 
 ## Installation
 
-<details><summary>Empfolen ist eine venv (virtual environment) zu erstellen. Klicke hier um mehr zu erfahren:</summary>
+<details><summary>It is recommended to create a virtual environment (venv). Click here to learn more:</summary>
 
 ```bash
 python -m venv market-plotter
 ```
 
-### venv aktivieren:
+### Activate venv:
 
 #### Windows:
 
@@ -68,13 +61,14 @@ python -m venv market-plotter
 source market-plotter/bin/activate
 ```
 
-<details><summary>deaktivieren von virtual environment</summary>
+<details><summary>Deactivate virtual environment</summary>
+
 ```bash
 deactivate
 ```
 </details>
 
-<details><summary>entfernen der virtual environment:</summary>
+<details><summary>Remove virtual environment:</summary>
 
 ##### Windows:
 
@@ -90,7 +84,7 @@ rm -rf market-plotter
 
 </details>
 
-<details><summary>virtual environment umbenennen:</summary>
+<details><summary>Rename virtual environment:</summary>
 
 #### First, deactivate if active
 
@@ -110,32 +104,30 @@ deactivate
   mv market-plotter new_name
 ```
 
-#### Nach dem Umbenennen, überprüfe und aktualisiere absolute Pfade in den Aktivierungsskripten, falls notwendig.
+#### After renaming, verify and update absolute paths in activation scripts if necessary.
 
 </details>
 </details>
 
-
-Stelle sicher, dass Python 3 installiert ist. Anschließend können die benötigten Pakete via `pip` installiert werden:
+Ensure that Python 3 is installed. Then install the required packages via `pip`:
 
 ```bash
 pip install PySide6 matplotlib qdarkstyle pandas requests
 ```
 
-Alternativ kann auch das `requirements.txt`-File genutzt werden:
+Alternatively, you can use the `requirements.txt` file:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-<details><summary>Falls gewünscht, kann das Programm auch als ausführbare Datei <code>exe</code> für Windows-Systeme erstellt werden. Hierfür wird
-das Paket <code>pyinstaller</code> benötigt:</summary>
+<details><summary>If desired, the program can also be compiled into an executable <code>exe</code> file for Windows systems. The <code>pyinstaller</code> package is required for this:</summary>
 
 ```bash
 pip install pyinstaller
 ```
 
-Anschließend kann das Programm mit folgendem Befehl kompiliert werden:
+Then compile the program with the following command:
 
 ```bash
 pyinstaller --onefile --windowed --icon=icon.ico MarketDataAPIv3.py
@@ -143,24 +135,19 @@ pyinstaller --onefile --windowed --icon=icon.ico MarketDataAPIv3.py
 
 </details>
 
+## Usage
 
-## Benutzung
+❗ Before starting the program, a [marketstack.com](https://marketstack.com) key should be added to the `.env` file.
 
-❗ Vor der Programmstart sollte ein [marketstack.com](https://marketstack.com) Key in den `.env` hinzugefügt werden.
-
-Das Programm kann über die Kommandozeile gestartet werden:
+Start the program via the command line:
 
 ```bash
 python MarketDataAPIv3.py
 ```
 
-Nach dem Start des Programms kann entweder ein Aktien-Symbol aus dem Dropdown-Menü ausgewählt oder ein eigenes Symbol
-eingegeben werden. Anschließend kann entweder über die API oder über eine lokale Datei die Daten geladen werden.
+After launching the program, a stock symbol can be selected from the dropdown menu or a custom symbol can be entered. Data can then be loaded either via the API or from a local file.
 
-Custom-Plot-Optionen können über die GUI eingestellt werden. Der Plot kann als Bild gespeichert oder die Daten
-exportiert
-werden.
-
+Custom plot options can be configured via the GUI. The plot can be saved as an image, and the data can be exported.
 
 ## Screenshots
 
@@ -170,8 +157,7 @@ werden.
 ![img_1.png](docs/screenshots/img_1.png)
 </details>
 
-
-## Quellen
+## Sources
 
 - [SVGREPO](https://www.svgrepo.com/collections/)
 - [Marketstack](https://marketstack.com/)
