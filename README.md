@@ -1,3 +1,4 @@
+[![DE](https://img.shields.io/badge/lang-de-gold.svg)](./README.de-DE.md)
 # Marketstack Plotter
 
 An advanced plotter program that loads financial data either via the Marketstack API or from a local JSON/CSV file and visualizes them in two different plot areas.
